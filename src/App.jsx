@@ -58,6 +58,7 @@ function App() {
     setEditId(null)
     setEditText("")
   }
+  
   const handleEditChange = (e) => {
     setEditText(e.target.value)
   }
@@ -113,13 +114,17 @@ function App() {
                     className="bg-green-600 text-white px-3 py-1 rounded text-sm font-bold">
                     Save
                   </button>
-                ) : (
-                  <button
-                    onClick={() => handleEdit(item.id, item.todo)}
-                    className="bg-blue-600 text-white px-3 py-1 rounded text-sm font-bold">
-                    Edit
-                  </button>
-                )}
+                ) 
+                : 
+                ( ""
+                // <button
+                //     onClick={() => handleEdit(item.id, item.todo)}
+                //     className="bg-blue-600 text-white px-3 py-1 rounded text-sm font-bold">
+                //     Edit
+                // </button>
+                )
+
+                }
 
                 <button
                   onClick={() => handleDelete(item.id)}
